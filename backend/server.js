@@ -22,11 +22,9 @@ app.use(express.json());
 // Public auth routes
 app.use("/api/auth", authRoutes);
 
-
 // public & protected routing (example pattern used in your app)
 app.use("/api/campaigns", campaignRoutes);
 app.use("/api/donations", donationRoutes);
-
 
 // Protect all user routes with JWT auth
 app.use("/api/users", authenticateToken, userRoutes);
